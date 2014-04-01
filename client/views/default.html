@@ -1,0 +1,45 @@
+<head>
+  <title>mrtBasicProject</title>
+</head>
+
+<template name="defaultLayout">
+	{{> navbar}}
+	{{> flashMessages}}
+	<div class="container">
+	  <div clas="row">
+		  {{> yield}}
+	  </div>
+	</div>
+	{{> footer}}
+</template>
+
+<template name="navbar">
+	<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">MyProject</a>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      <li class='{{TabActive "hello"}}'><a href="/">Hello</a></li>
+      <li class='{{TabActive "link1"}}'><a href="/">link1</a></li>
+      <li class='{{TabActive "link2"}}'><a href="/">link2</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/about">About</a></li>
+    </ul>
+  </div>
+</div>
+</template>
+
+<template name="footer">
+	<div id="footer">
+      <div class="container">
+        <p class="text-muted">Project created during MIA Music Summit HackDay - March 2014 - Nicolas Grenié</p>
+      </div>
+    </div>
+</template>
